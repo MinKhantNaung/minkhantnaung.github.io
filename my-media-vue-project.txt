@@ -1,0 +1,46 @@
+In index.html 
+when connect with css js files, example--> <link href="/assets/css/index.css">
+Need = '/'
+
+to give parameter to route
+
+showDetail(id) {
+      this.$router.push({ 
+        path: '/detail', 
+        query: { 
+            id: id 
+            } 
+        });
+}
+to get that data------> this.$route.query.id;
+
+to give parameter in url 
+postDetails(id) {
+            this.$router.push(`/post/details/${id}`);
+        }
+
+to get that data-------> this.$route.params.id;
+
+to go to back ---->history.back() (this is js method)
+Or 
+to go with route ---->this.$router.push({path: '/'})
+
+
+How to use Vuex for login process
+===================================
+in store / index.ts====>
+in state, variable or object assign
+in actions, write functions for put data
+to use actions in vue, use this--->this.$store.dispatch('funcName', parameter)
+in getters, write functions for get data from state
+to use getters in vue, import mapGetter to vue, in computed, ...mapGetters(['funcName'])
+to use func from mapGetters, this.funcName
+
+to use groupBy to group by one parameter from database query builder
+=====================================================================
+in database.php ===> 'strict' => false 
+when you use groupBy --> you can find (count, max, min)
+to calculate count==> $posts = Post::select('posts.*', 'action_logs.*', DB::raw('count(action_logs.post_id) as post_count'))
+            ->rightJoin('action_logs', 'action_logs.post_id', 'posts.id')
+            ->groupBy('action_logs.post_id')
+            ->get();

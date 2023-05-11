@@ -1,0 +1,22 @@
+Most useful git commands
+
+initialize git Repository-->git init
+to check stages =---------->git status
+to stage all files -------->git add .
+to commit with message----->git commit -m "message"
+to see all commits with direct message names------>git log --oneline
+to checkout or go back to commit history --------->git checkout copyNameFromInfrontofCommit (also used for go to branch)
+to go back final commit (master)------------------>git checkout master
+to delete commits above from this commit  -------->git reset copyNameFromInfrontofCommit
+
+branches===========
+to see all branches ------------------------------>git branch -a
+to create branch --------------------------------->git branch branch-name
+to go to branch ---------------------------------->git checkout branch-name (also used for go to commit)
+short-hand above (two)
+create a new branch and go to that branch -------->git checkout -b new-branch-name
+
+to delete branch --------------------------------->git branch -D branch-name
+to merge branch to master------------------------->git merge branch-name
+
+

@@ -1,0 +1,21 @@
+install composer dependicies
+---composer install
+install npm dependicies
+---npm install
+create a copy of .env file
+---cp .env.example .env
+Generate an app encryption key
+---php artisan key:generate
+Create an empty database for our application
+ In the .env file, add database information to allow Laravel to connect to the database
+start npm run build
+---npm run build
+if exist database seeder
+---php artisan db:seed
+
+if you use in public/storage 
+delete storage and run
+---php artisan storage:link
+
+migrate 
+---php artisan migrate
